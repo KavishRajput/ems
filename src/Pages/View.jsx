@@ -6,7 +6,7 @@ export const View = () => {
   const [data, setData] = useState({});
   const getviewdata= async()=>{
     try{
-      const getviewresponse=await axios.get(`http://localhost:3000/employeesnpx/${id}`);
+      const getviewresponse=await axios.get(`http://localhost:3000/employees/${id}`);
       setData(getviewresponse.data);
     }
     catch(error){

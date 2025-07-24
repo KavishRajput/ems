@@ -10,7 +10,7 @@ export const Employee = () => {
 
 const getPeginationEmpdata = async () => {  
     try {
-      const getpeginationresponse = await axios.get("http://localhost:3000/employeesnpx/?_page=1&_per_page=4");
+      const getpeginationresponse = await axios.get("http://localhost:3000/employees/?_page=1&_per_page=4");
       console.log(getpeginationresponse.data)
       setTotalpages(getpeginationresponse.data.pages)
     } catch (err) {

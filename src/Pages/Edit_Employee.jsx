@@ -6,7 +6,7 @@ export const Edit_Employee=()=>{
     const {id}=useParams()
     const [employee, setEmployee] = useState({})
     const getsingleempdata=async()=>{
-        const getsingleemp = await axios.get(`http://localhost:3000/employeesnpx/${id}`);
+        const getsingleemp = await axios.get(`http://localhost:3000/employees/${id}`);
         const data=getsingleemp.data
         setEmployee(data)
     }

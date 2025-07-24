@@ -11,7 +11,7 @@ export const ApiProvider = ({ children }) => {
 
   const getEmpdata = async () => {  
     try {
-      const getresponse = await axios.get("http://localhost:3000/employeesnpx");
+      const getresponse = await axios.get("http://localhost:3000/employees");
       setEmployee(getresponse.data);
       setFilterdata(getresponse.data);
     } catch (err) {
@@ -23,7 +23,7 @@ export const ApiProvider = ({ children }) => {
     try {
       const check = confirm("Are You Sure You Want To Delete This Employee?");
       if (check) {
-        const response = await axios.delete(`http://localhost:3000/employeesnpx/${id}`);
+        const response = await axios.delete(`http://localhost:3000/employees/${id}`);
         console.log(response);
         setDeleteempdata(response.data);
         getEmpdata();

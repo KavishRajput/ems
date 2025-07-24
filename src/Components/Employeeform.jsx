@@ -21,7 +21,7 @@ export const EmployeeForm = ({onedit=false,defaultdata=null}) => {
     console.log("data",data);
     if(onedit){
       //update employee
-      const putresponse = await axios.put(`http://localhost:3000/employeesnpx/${defaultdata.id}`, data);
+      const putresponse = await axios.put(`http://localhost:3000/employees/${defaultdata.id}`, data);
       console.log("putresponse",putresponse);
       toast.success('Successfully toasted!')
         navigate("/employee")
@@ -29,7 +29,7 @@ export const EmployeeForm = ({onedit=false,defaultdata=null}) => {
 
 
     else{
-      const postresponse = await axios.post(`http://localhost:3000/employeesnpx`,data);
+      const postresponse = await axios.post(`http://localhost:3000/employees`,data);
       console.log(postresponse)
       
       if(isSubmitSuccessful || !onedit){
